@@ -25,14 +25,14 @@ const images = [
   },
 ];
 
-const createEl = ({ url, alt }) =>
+const li = ({ url, alt }) =>
   `<li  class="li">
        <img class="img"
        src="${url}"
         alt="${alt}" />
   </li>`;
 
-const elem = images.map(createEl).join("");
+const elem = images.map(li).join("");
 
 const gallery = document.querySelector(".gallery");
 gallery.insertAdjacentHTML("beforeend", elem);
